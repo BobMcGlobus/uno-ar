@@ -26,10 +26,10 @@
 -webkit-box-shadow: 1px 7px 19px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 1px 7px 19px 0px rgba(0,0,0,0.75);
     position: fixed;
-    right: 1 rem;
-    bottom: 1 rem;
-    width: 200 px;
-    height: 130 px;
+    right: 1rem;
+    bottom: 1rem;
+    width: 200px;
+    height: 130px;
     margin: auto;
     padding: 1em;
     border-radius: 100px;
@@ -90,10 +90,10 @@
   #info{
     z-index: 10;
     position: fixed;
-    left: 1 rem;
-    bottom: 1 rem;
-    width: 130 px;
-    height: 130 px;
+    left: 1rem;
+    bottom: 1rem;
+    width: 130px;
+    height: 130px;
     margin: auto;
     padding: 1em;
     border-radius: 100px;
