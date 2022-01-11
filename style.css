@@ -1,0 +1,134 @@
+#infomodal{
+    background-color: rgba(0, 0, 0, 0.486);
+}
+
+#infomodal .modal-content{
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+}
+
+#infomodal .close{
+    color: rgb(255, 0, 0);
+}
+
+#endtext{
+    text-align: center;
+}
+
+.close-btn{
+    width: 100%;
+}
+
+#toggleAudio {
+    z-index: 10;
+    box-shadow: 1px 7px 19px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 1px 7px 19px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 1px 7px 19px 0px rgba(0,0,0,0.75);
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    width: 200px;
+    height: 130px;
+    margin: auto;
+    padding: 1em;
+    border-radius: 100px;
+    color: white;
+    background: #8b0909;
+    font: normal bold 2em/1.5em sans-serif;
+    line-height: 60px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#toggleAudio.state--active {
+    background: #416a18;
+}
+
+.switch {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background: none;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }  
+
+#slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: none;
+    -webkit-transition: .4s;
+    transition: .4s;
+    color: #000;
+  }
+  
+  #slider:before {
+    position: absolute;
+    content: '\01F50A';
+    font-size: 70px;
+    text-align: center;
+    color: #000;
+    padding-top: 30px;
+    height: 120px;
+    width: 120px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  #info{
+    z-index: 10;
+    position: fixed;
+    left: 1rem;
+    bottom: 1rem;
+    width: 130px;
+    height: 130px;
+    margin: auto;
+    padding: 1em;
+    border-radius: 100px;
+    color: white;
+    border-radius: 100px;
+    background: #097c8b;
+    font: normal bold 2em/1.5em sans-serif;
+    line-height: 60px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 1px 7px 19px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 1px 7px 19px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 1px 7px 19px 0px rgba(0,0,0,0.75);
+  }
+  
+  input:checked + #slider {
+    background-color: none;
+  }
+  
+  input:focus + #slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  #slider.slider--active {
+    -webkit-transform: translateX(70px);
+    -ms-transform: translateX(70px);
+    transform: translateX(70px);
+
+  }
+  
+  /* Rounded sliders */
+  #slider {
+    border-radius: 34px;
+  }
+  
+ #slider:before {
+    border-radius: 50%;
+  }

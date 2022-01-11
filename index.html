@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/dist/mindar-image.prod.js"></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/dist/mindar-image-aframe.prod.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+
+</style>
+</head>
+<body>
+<div class="bodyoverlay">
+    <div class="modal" id="infomodal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+          
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Herzlich Willkommen zum UNO Augmented Reality Assistent</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            
+            <!-- Modal body -->
+            <div class="modal-body">
+                <h3>Anleitung:</h3>
+                <p>Klicke auf den Audio-Button in der rechten unteren Ecke, um die Audiofunktion des Assistenten zu aktivieren. <br><br>
+                    Scanne deine Karte innerhalb des angezeigten Rahmens. Der Assistent wird dir dann auf der Karte zeigen, was du mit dieser tun kannst.</p>
+                <h6 id="endtext">Viel Spaß beim Spielen!</h6>
+            </div>
+            
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger close-btn" data-dismiss="modal">Schließen</button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+</div>
+<a href="https://google.de" target=”_blank” rel="noopener">Google<div id="info">&#9432</div></a>
+<div id="toggleAudio">
+    <label class="switch">
+        <span id="slider"></span>
+    </label>
+</div>
+<a-scene mindar-image="imageTargetSrc: targets.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+    <a-assets>
+        <img id="card" src="RETOURKARTE.png" />
+        <img id="schmard" src="ZIEH_VIER_FARBENWAHLKARTE.png" />
+        <!--<a-asset-item id="avatarModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/examples/image-tracking/assets/card-example/softmind/scene.gltf"></a-asset-item> -->
+    </a-assets>
+
+    <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+    <a-entity mindar-image-target="targetIndex: 0 ">
+        <a-plane src="#schmard" position="0 0 0" height="1.6" width="1" rotation="0 0 0"></a-plane>
+        <!--<a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="0.005 0.005 0.005" src="#avatarModel" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">-->
+    </a-entity>
+    <a-entity id='test' mindar-image-target="targetIndex: 1 ">
+        <a-plane src="#card" position="0 0 0" height="1.6" width="1" rotation="0 0 0"></a-plane>
+        <!--<a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="0.005 0.005 0.005" src="#avatarModel" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">-->
+    </a-entity>
+</a-scene>
+<script language="javascript" type="text/javascript">
+    window.onload = init;
+    let isOn = false;
+    function init(){
+        const exampleTarget = document.querySelector('#test');
+        exampleTarget.addEventListener("targetFound", event => {
+            playAudio('okay-lets-go.mp3');
+        });
+        var elem = document.getElementById('toggleAudio');
+        elem.onclick = toggleclass;
+    }
+
+    function toggleclass(){
+        console.log(this.attributes.class);
+        var activeclass = 'state--active';
+        var slider = document.getElementById('slider');
+        var addsliderclass = 'slider--active'
+        var state = this.getAttribute('class');
+
+        if(!state){
+            this.setAttribute('class', activeclass);
+            slider.setAttribute('class', addsliderclass);
+            isOn = true;
+        }else{
+            this.removeAttribute('class');
+            slider.removeAttribute('class');
+            isOn = false;
+        }
+    }
+
+    function playAudio(audio) {
+    console.log('pluy')
+        if (isOn) {
+            new Audio(audio).play();
+        }
+
+    }
+    $(document).ready(function() {
+  $('#infomodal').modal('show');
+});
+
+
+
+</script>
+</body>
+</html>
