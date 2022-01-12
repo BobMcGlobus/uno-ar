@@ -6,9 +6,8 @@ All rights of the basic card game are owned by Mattel.  so please don't sue us ;
 We are online media students of the DHBW Mosbach in Germany. Currently (start of this repo) we are in our fifth semester. The team of this project consists of five people, two of which are responsible for the development of this prototype.
 
 ### Why this project exists
-Dieses Projekt ist als Uni Projektarbeit des fünften Semesters an unseres Onlinemedien Studienganges. Wir hatten die Aufgabe ein klassisches Spiel mit einer zusätzlichen Augmented realaty ebene zu versehen.
-Wir überlegten eine weile wie wir dies am besten machen könnten und kamen zum Schluss ein Kartenspiel zu wählen. Unsere Wahl fiel dabei auf das in Deutschland sehr beliebte Kartenspiel UNO von Mattel.
-Da unserer Meinung nach Uno nicht von Spielerischen 3D Modellen Profitiert hätte wie dies ein Trainingcardgame getahen hätte. Daher habenwir uns dazu entschieden, die Spielanleitung mittels Ar zugänglich zu machen. 
+This project is a university project of the fifth semester of our online media course. We had the task to add an augmented reality layer to a classic game. We thought for a while how we could do this best and came to the conclusion to choose a card game. Our choice was the very popular card game UNO from Mattel. Since in our opinion Uno would not have benefited from playful 3D models like a training card game would have. Therefore we decided to make the game manual accessible via Ar.
+
 
 ## How it works
 UNO-AR works entirely in the browser, camera and other sensor data are not sent to the server, 
