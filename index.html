@@ -49,24 +49,64 @@
         <span id="slider"></span>
     </label>
 </div>
-<a-scene mindar-image="imageTargetSrc: targets.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+
+<a-scene mindar-image="imageTargetSrc: targets-UNO.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
     <a-assets>
-        <img id="card" src="RETOURKARTE.png" />
-        <img id="schmard" src="ZIEH_VIER_FARBENWAHLKARTE.png" />
+        <img id="retoure" src="images/retoure.png" />
+        <img id="draw_4_color" src="images/draw_4_color.png" />
+        <img id="draw_2" src="images/draw_2.png" />
+        <img id="numbers" src="images/numbers.png" />
+        <img id="skip" src="images/skip.png" />
+
         <!--<a-asset-item id="avatarModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/examples/image-tracking/assets/card-example/softmind/scene.gltf"></a-asset-item> -->
     </a-assets>
 
     <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
     <a-entity mindar-image-target="targetIndex: 0 ">
-        <a-plane src="#schmard" position="0 0 0" height="1.6" width="1" rotation="0 0 0"></a-plane>
+        <a-plane src="#draw_2" position="0 0 0" height="1.6" width="1" rotation="0 0 0"></a-plane>
         <!--<a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="0.005 0.005 0.005" src="#avatarModel" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">-->
     </a-entity>
+
+    <!--    NUMBERS -->
     <a-entity id='test' mindar-image-target="targetIndex: 1 ">
-        <a-plane src="#card" position="0 0 0" height="1.6" width="1" rotation="0 0 0"></a-plane>
-        <!--<a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="0.005 0.005 0.005" src="#avatarModel" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">-->
+        <a-plane src="#numbers" position="0 0 0" height="1.6" width="1" rotation="0 0 0"></a-plane>
     </a-entity>
+    <a-entity id='test' mindar-image-target="targetIndex: 2 ">
+        <a-plane src="#numbers" position="0 0 0" height="1.6" width="1" rotation="0 0 0"></a-plane>
+    </a-entity>
+    <a-entity id='test' mindar-image-target="targetIndex: 3 ">
+        <a-plane src="#numbers" position="0 0 0" height="1.6" width="1" rotation="0 0 0"></a-plane>
+    </a-entity>
+    <a-entity id='test' mindar-image-target="targetIndex: 4 ">
+        <a-plane src="#numbers" position="0 0 0" height="1.6" width="1" rotation="0 0 0"></a-plane>
+    </a-entity>
+    <a-entity id='test' mindar-image-target="targetIndex: 5 ">
+        <a-plane src="#numbers" position="0 0 0" height="1.6" width="1" rotation="0 0 0"></a-plane>
+    </a-entity>
+    <a-entity id='test' mindar-image-target="targetIndex: 6 ">
+        <a-plane src="#numbers" position="0 0 0" height="1.6" width="1" rotation="0 0 0"></a-plane>
+    </a-entity>
+    <a-entity mindar-image-target="targetIndex: 7 ">
+        <a-plane src="#numbers" position="0 0 0" height="1.6" width="1" rotation="0 0 0"></a-plane>
+    </a-entity>
+
+    <a-entity mindar-image-target="targetIndex: 8 ">
+        <a-plane src="#retoure" position="0 0 0" height="1.6" width="1" rotation="0 0 0"></a-plane>
+    </a-entity>
+    <a-entity mindar-image-target="targetIndex: 9 ">
+        <a-plane src="#skip" position="0 0 0" height="1.6" width="1" rotation="0 0 0"></a-plane>
+    </a-entity>
+    <a-entity mindar-image-target="targetIndex: 10 ">
+        <a-plane src="#draw_4_color" position="0 0 0" height="1.6" width="1" rotation="0 0 0"></a-plane>
+    </a-entity>
+
 </a-scene>
+
+
+
+
+
 <script language="javascript" type="text/javascript">
     window.onload = init;
     let isOn = false;
