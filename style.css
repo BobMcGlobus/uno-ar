@@ -87,6 +87,7 @@
     background-color: #fff;
     -webkit-transition: .4s;
     transition: .4s;
+      line-height: 41px;
   }
 
   #info{
