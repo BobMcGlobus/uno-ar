@@ -22,3 +22,6 @@ Unfortunately, not all uno cards are compatible at the time of this project, the
 Additionally it is to be noted that the appearing instructions will be in German, this has to do with the fact that this project was developed in the context of a work for a German university.
 
 https://imgur.com/a/0ftEFfA
+
+## Run local
+To run the project locally, it is sufficient to simply run the project through a local web server.
