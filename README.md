@@ -21,5 +21,4 @@ You can easily try UNO AR by going to [https://www.ar-nav.de](https://www.ar-nav
 Unfortunately, not all uno cards are compatible at the time of this project, there are simply too many different card designs. However, we have listed some below for testing.
 Additionally it is to be noted that the appearing instructions will be in German, this has to do with the fact that this project was developed in the context of a work for a German university.
 
-<img src="https://lh4.googleusercontent.com/Xb98ZzBCDyP3ls-ZWkOxlibDB3GfItcbe7hO18ge727TainzpYND-wCLnGUus9VzEMzwdAhrIRJCalXctqVh=w737-h1238-rw" width="35%" border="10px"/>
-<img src="https://lh3.googleusercontent.com/up-kTuj9jzX5AAeMXXhC7w45flxG5m1OduaxbGdhMGBOjncUcB0o5RFYtEUegYUIHc6LwlqXETp5Zwj5Sqfw=w1530-h1238-rw" width="35%" border="10px"/>
+https://imgur.com/a/0ftEFfA
